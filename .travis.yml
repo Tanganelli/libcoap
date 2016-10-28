@@ -29,6 +29,7 @@ addons:
     - lynx-cur
     - sgmlspl
     - xorg-sgml-doctools
+    - texlive
 
 # build only travis-test branch for now
 branches:
