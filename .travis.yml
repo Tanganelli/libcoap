@@ -4,12 +4,9 @@ dist: trusty
 language: c
 compiler:
   - gcc
-  - clang
 
 env:
   - PLATFORM=posix TESTS=yes
-  - PLATFORM=contiki
-  - PLATFORM=lwip
 
 addons:
   apt_packages:
@@ -36,6 +33,6 @@ branches:
   only:
      - travis-test
 
-before_script: ./autogen.sh --clean && ./autogen.sh
+before_script: dpkg -l && ./autogen.sh --clean && ./autogen.sh
 
 script: scripts/build.sh
