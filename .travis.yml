@@ -21,13 +21,14 @@ addons:
     - xsltproc
     - docbook-xml
     - asciidoc
+    - libxml-parser-perl
+    - libxml-twig-perl
+    - libxml-xpathengine-perl
 
 # build only travis-test branch for now
 branches:
   only:
      - travis-test
-
-before_install: sudo apt-get -y update && sudo apt-get -y upgrade
 
 before_script: ./autogen.sh --clean && ./autogen.sh
 
