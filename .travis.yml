@@ -1,3 +1,6 @@
+sudo: required
+dist: trusty
+
 language: c
 compiler:
   - gcc
@@ -19,11 +22,10 @@ addons:
     - docbook-xml
     - asciidoc
 
+# build only travis-test branch for now
 branches:
   only:
-     - master
-     - develop
-     - /^release-.*$/
+     - travis-test
 
 before_script: ./autogen.sh --clean && ./autogen.sh
 
