@@ -27,8 +27,8 @@ branches:
   only:
      - travis-test
 
-before_install: dpkg -l
+before_install: sudo apt-get -y update && sudo apt-get -y upgrade
 
-before_script: ./autogen.sh --clean && ./autogen.sh && dpkg -l
+before_script: ./autogen.sh --clean && ./autogen.sh
 
 script: scripts/build.sh
