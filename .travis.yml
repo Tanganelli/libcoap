@@ -25,6 +25,10 @@ addons:
     - libxml-twig-perl
     - libxml-xpathengine-perl
     - dblatex
+    - lynx
+    - lynx-cur
+    - sgmlspl
+    - xorg-sgml-doctools
 
 # build only travis-test branch for now
 branches:
