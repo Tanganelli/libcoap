@@ -1,7 +1,7 @@
 #! /bin/sh
 
 if test "x$TESTS" = "xyes" -o "x$TESTS" = "xtrue" ; then
-    WITH_TESTS=`scripts/fix-cunit.sh` --enable-tests
+    WITH_TESTS="`scripts/fix-cunit.sh` --enable-tests"
     test -f `pwd`/cunit.pc && echo cat `pwd`/cunit.pc
 fi
      
