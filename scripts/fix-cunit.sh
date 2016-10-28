@@ -1,7 +1,7 @@
 #! /bin/sh
 
 # only continue if `pkgconfig cunit` fails
-pkg-config cunit && exit 0
+pkg-config cunit 2>/dev/null && exit 0
 
 # Check if the system has a cunit.pc.
 # If not, exit with success (the configure script will raise
@@ -13,4 +13,3 @@ fi
 
 # output location of generated cunit.pc
 echo PKG_CONFIG_PATH=`pwd`
-cat `pwd`/cunit.pc
