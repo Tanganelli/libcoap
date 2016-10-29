@@ -18,7 +18,6 @@ addons:
     - xsltproc
     - docbook-xml
     - docbook-xsl
-    - docbook-dsssl
     - asciidoc
     - libxml-parser-perl
     - libxml-twig-perl
